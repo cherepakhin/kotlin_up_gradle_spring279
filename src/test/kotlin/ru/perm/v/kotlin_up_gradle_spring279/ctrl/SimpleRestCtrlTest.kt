@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import ru.perm.v.kotlin_up_gradle_spring279.dto.SimpleDto
 
-internal class SimpleDtoCtrlTest {
+internal class SimpleRestCtrlTest {
 
-    val simpleDtoCtrl = SimpleDtoCtrl()
+    val simpleCtrl = SimpleRestCtrl()
+
     @Test
     fun getById() {
         val ID = 1
-        var answer = simpleDtoCtrl.getById(ID)
-        assertEquals(SimpleDto(ID,"simple1"), answer)
+        assertEquals(SimpleDto(ID, "simple1"), simpleCtrl.getById(ID))
     }
 }

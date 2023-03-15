@@ -8,7 +8,7 @@ import ru.perm.v.kotlin_up_gradle_spring279.dto.SimpleDto
 
 @RestController
 @RequestMapping("/simple")
-class SimpleDtoCtrl {
+class SimpleRestCtrl {
     @GetMapping("/{id}")
     fun getById(@PathVariable("id") id: Int): SimpleDto {
         return SimpleDto(id, "simple" + id)
