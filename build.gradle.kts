@@ -49,19 +49,3 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
-
-//tasks.register("generateServer", org.openapitools.generator.gradle.plugin.tasks.GenerateTask::class) {
-//	input = project.file(oasSpecLocation).path
-//	outputDir.set(oasGenOutputDir.get().toString())
-//	modelPackage.set("$oasPackage.model")
-//	apiPackage.set("$oasPackage.api")
-//	packageName.set(oasPackage)
-//	generatorName.set("kotlin-spring")
-//	configOptions.set(
-//		mapOf(
-//			"dateLibrary" to "java8",
-//			"interfaceOnly" to "true",
-//			"useTags" to "true"
-//		)
-//	)
-//}
