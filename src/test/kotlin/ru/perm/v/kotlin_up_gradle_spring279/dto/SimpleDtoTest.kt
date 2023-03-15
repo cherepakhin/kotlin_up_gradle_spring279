@@ -9,14 +9,14 @@ internal class SimpleDtoTest {
     @Test
     fun testConstructorDefault() {
         var dto = SimpleDto()
-        assertEquals(0, dto.n)
+        assertEquals(0, dto.id)
         assertEquals("-", dto.name)
     }
 
     @Test
     fun testConstructorWithParam() {
         var dto = SimpleDto(10, "name10")
-        assertEquals(10, dto.n)
+        assertEquals(10, dto.id)
         assertEquals("name10", dto.name)
     }
 }

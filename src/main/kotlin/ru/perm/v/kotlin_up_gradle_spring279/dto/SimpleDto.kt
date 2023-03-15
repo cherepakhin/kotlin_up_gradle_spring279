@@ -10,7 +10,7 @@ data class SimpleDto(
         type = "int",
         minimum = "0"
     )
-    var n: Int = 0,
+    var id: Int = 0,
     @field:Schema(
         description = "Name",
         example = "Any string",

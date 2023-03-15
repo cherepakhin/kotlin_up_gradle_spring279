@@ -22,7 +22,7 @@ class SimpleRestCtrl {
         ]
     )
     @GetMapping("/{id}")
-    fun getById(@Parameter @PathVariable("id") id: Int): SimpleDto {
+    fun getById(@Parameter(name = "id", description = "Id of SimpleDto") @PathVariable("id") id: Int): SimpleDto {
         return SimpleDto(id, "simple" + id)
     }
 }
