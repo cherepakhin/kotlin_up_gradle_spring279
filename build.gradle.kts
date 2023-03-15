@@ -32,6 +32,8 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-data-rest:1.6.0")
 	implementation("org.springdoc:springdoc-openapi-ui:1.6.0")
 	implementation("org.springdoc:springdoc-openapi-kotlin:1.6.0")
+	// Logger
+	implementation("io.github.oshai:kotlin-logging-jvm:4.0.0-beta-22")
 	// Lombok
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
