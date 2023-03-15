@@ -28,8 +28,14 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	// Парсинг JSON
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	// OpenApi
+	implementation("org.springdoc:springdoc-openapi-data-rest:1.6.0")
+	implementation("org.springdoc:springdoc-openapi-ui:1.6.0")
+	implementation("org.springdoc:springdoc-openapi-kotlin:1.6.0")
+	// Lombok
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
+	// Test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
@@ -43,3 +49,19 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+//tasks.register("generateServer", org.openapitools.generator.gradle.plugin.tasks.GenerateTask::class) {
+//	input = project.file(oasSpecLocation).path
+//	outputDir.set(oasGenOutputDir.get().toString())
+//	modelPackage.set("$oasPackage.model")
+//	apiPackage.set("$oasPackage.api")
+//	packageName.set(oasPackage)
+//	generatorName.set("kotlin-spring")
+//	configOptions.set(
+//		mapOf(
+//			"dateLibrary" to "java8",
+//			"interfaceOnly" to "true",
+//			"useTags" to "true"
+//		)
+//	)
+//}
