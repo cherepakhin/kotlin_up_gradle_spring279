@@ -32,7 +32,9 @@ internal class EchoRestCtrlTest {
     @Test
     fun echo() {
         val mes = "TEST_STRING"
-        val result = mockMvc.perform(get("/echo/" + mes).contentType(APPLICATION_JSON)).andReturn()
-        assertEquals(mes, result.response.contentAsString)
+        val result =
+            mockMvc.perform(get("/echo/" + mes)
+                .contentType(APPLICATION_JSON)).andReturn().response.contentAsString
+        assertEquals(mes, result)
     }
 }
