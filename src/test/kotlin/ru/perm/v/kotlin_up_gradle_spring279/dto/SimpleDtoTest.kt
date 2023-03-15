@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Assertions.*
 internal class SimpleDtoTest {
 
     @Test
-    fun testDefaultConstructor() {
+    fun testConstructorDefault() {
         var dto = SimpleDto()
         assertEquals(0, dto.n)
         assertEquals("-", dto.name)
     }
 
     @Test
-    fun testConstructor() {
+    fun testConstructorWithParam() {
         var dto = SimpleDto(10, "name10")
         assertEquals(10, dto.n)
         assertEquals("name10", dto.name)

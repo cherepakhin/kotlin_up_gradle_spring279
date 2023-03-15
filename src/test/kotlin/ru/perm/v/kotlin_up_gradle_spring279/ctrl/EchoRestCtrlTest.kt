@@ -1,6 +1,6 @@
 package ru.perm.v.kotlin_up_gradle_spring279.ctrl
 
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
@@ -9,7 +9,6 @@ import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
-import ru.perm.v.kotlin_up_gradle_spring279.ctrl.EchoRestCtrl
 
 
 @AutoConfigureMockMvc
@@ -25,7 +24,7 @@ internal class EchoRestCtrlTest {
     Подобный подход удобен во многих случаях, избегая проверки на null.
     В противном случае пришлось бы постоянно использовать проверку или утверждение !!, что засоряет код.
     Если вы обратитесь к переменной до её инициализации,
-    то получите исключение "lateinit property ... hos not been initialized" вместо NullPointerException.
+    то ПОЛУЧИТЕ ИСКЛЮЧЕНИЕ "lateinit property ... hos not been initialized" вместо NullPointerException.
      */
     @Autowired
     lateinit var mockMvc: MockMvc
