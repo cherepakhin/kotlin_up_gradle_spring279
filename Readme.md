@@ -1,6 +1,12 @@
 ### Примитивный KOTLIN проект
 
-Освоить Kotlin. Написать REST сервис с подключением БД Postges и кешем для REST.
+Цель - освоить Kotlin. Написать сервис:
+- gradle
+- с REST API
+- Swagger или OpenApi
+- с подключением БД Postges
+- кешем для REST
+- Упаковать в Docker
 
 
 
