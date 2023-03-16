@@ -6,6 +6,7 @@ plugins {
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
 	kotlin("plugin.jpa") version "1.6.21"
+	id("org.flywaydb.flyway")  version "9.8.1"
 }
 
 group = "ru.perm.v"
@@ -24,7 +25,8 @@ repositories {
 
 dependencies {
 	// JPA
-//	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	// Парсинг JSON
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -39,6 +41,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	// Test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	runtimeOnly("org.postgresql:postgresql")
 }
 
 tasks.withType<KotlinCompile> {
@@ -50,4 +53,10 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+flyway {
+	url = "jdbc:postgresql://127.0.0.1:5432/person"
+	user = "postgres"
+	password = "postgres"
 }

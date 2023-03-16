@@ -16,3 +16,10 @@
 
 Доступен по адресу [http://localhost:8080/api/swagger-ui/index.html](http://localhost:8080/api/swagger-ui/index.html)
 
+
+#### Flyway
+Миграцию выполнять из корня проекта (где находится скрипт gradlew)
+````shell
+./gradlew flywayMigrate -i
+````
+-i - подробный вывод информации выполнения
