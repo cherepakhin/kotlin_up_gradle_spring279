@@ -13,7 +13,6 @@ internal class PersonRestCtrlTest {
     @Test
     fun getPyId() {
         val ID = 1
-        val p = PersonDto(ID, "name1", Sex.MEN)
-        assertEquals(p, personCtrl.getPyId(ID))
+        assertEquals(PersonDto(ID, "name1", Sex.MEN), personCtrl.getPyId(ID))
     }
 }
