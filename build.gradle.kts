@@ -41,6 +41,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	// Test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
 	runtimeOnly("org.postgresql:postgresql")
 }
 
