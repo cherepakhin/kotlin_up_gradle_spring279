@@ -5,14 +5,15 @@ import org.junit.jupiter.api.Test
 
 internal class SexTest {
     @Test
-    internal fun compareSexMEN() {
+    internal fun compareSex() {
+        val sex = Sex.WOMEN
+        assertEquals(Sex.WOMEN, sex)
+    }
+
+    @Test
+    internal fun compareSexValue() {
         val sex = Sex.MEN
         assertEquals("MEN", Sex.MEN.name)
     }
 
-    @Test
-    internal fun compareSexWOMEN() {
-        val sex = Sex.WOMEN
-        assertEquals(Sex.WOMEN, sex)
-    }
 }
