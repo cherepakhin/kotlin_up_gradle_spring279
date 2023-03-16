@@ -13,12 +13,14 @@ data class PersonDto( // data!!!
         defaultValue = "0"
     )
     var id: Int = 0,
+
     @field:Schema(
         description = "Name of person",
         example = "Ivan,Petr,...",
         defaultValue = "-"
     )
     var name: String = "-",
+
     @field:Schema(
         description = "Sex of person",
         example = "MEN/WOMEN",
