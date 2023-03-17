@@ -23,3 +23,15 @@
 ./gradlew flywayMigrate -i
 ````
 -i - подробный вывод информации выполнения
+
+#### Запуск
+
+Тесты
+````shell
+./gradlew test 
+````
+
+Приложение
+````shell
+./gradlew bootRun
+````
