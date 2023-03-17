@@ -37,3 +37,7 @@ out/
 ### VS Code ###
 .vscode/
 .jpb/
+
+### Behave tests ###
+
+behave_test/reports/
