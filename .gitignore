@@ -38,6 +38,6 @@ out/
 .vscode/
 .jpb/
 
-### Behave tests ###
+### Behave tests reports ###
 
 behave_test/reports/

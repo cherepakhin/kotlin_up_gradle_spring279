@@ -12,7 +12,7 @@ internal class SexTest {
 
     @Test
     internal fun compareSexValue() {
-        val sex = Sex.MEN
+        // val sex = Sex.MEN
         assertEquals("MEN", Sex.MEN.name)
     }
 
